@@ -1,3 +1,7 @@
 from pymongo import MongoClient
+from dotenv import load_dotenv
+import os
 
-conn = MongoClient("mongodb+srv://sezerensari:Sezo2001@firstcluster.oeeuw1d.mongodb.net/?retryWrites=true&w=majority")
+load_dotenv()
+
+conn = MongoClient(os.getenv('DATABASE_URL'))
